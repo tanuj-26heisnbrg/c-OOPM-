@@ -1,0 +1,61 @@
+#include<iostream>
+using namespace std;
+class StudentInfo 
+{
+    static float  a;
+    int RN;
+    string NAME;
+    float FEE;
+    string Branch;
+    public:
+    StudentInfo()
+    {
+        RN = 0;
+        NAME = " ";
+        FEE = 0;
+        Branch = " ";
+    }
+     void init (int RN, string name, float fee, string branch )
+    {
+        this -> RN = RN;
+        NAME = name;
+        FEE = fee;
+        Branch = branch;
+    }
+    void display ()
+    {cout<<RN<<" "<<NAME<<" "<<FEE<<" "<<Branch<<" "<<endl;}
+     
+     public:
+  float sum(float p)
+    { 
+        a+=FEE;
+        return a;
+    }
+};
+
+float StudentInfo :: a = 0;
+int main()
+{
+    int RN,i,N;
+    float FEE,p,x;
+    string NAME;
+    string Branch;
+    cout<<"ENter the total number of students ";
+    cin>>N;
+    cout<<"Enter the amount";
+    cin>>p;
+    StudentInfo SI[N];
+    for(i=0;i<N;i++)
+    {
+        cin>>RN>>FEE>>NAME>>Branch;
+        SI[i].init(RN,NAME,FEE,Branch);
+    }
+   // cout<<"ENter the name, roll number,fees and branch \n";
+   // cin>>NAME>>RN>>FEE>>Branch;
+ for(i=0;i<N;i++)
+ x= SI[i].sum(p);
+//  for(i=0;i<N;i++)
+// SI[i].display ();
+   cout<<"total fees"<<x;
+    return 0;
+}
