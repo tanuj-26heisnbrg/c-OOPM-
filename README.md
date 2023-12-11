@@ -1,2 +1,32 @@
 # c-OOPM-
 OOP CONCEPTS WITH C++
+#include <iostream>
+using namespace std ;   // PROGRAM TO SHOW RUNTIME POLYMORPHISM 
+
+class polygon {
+    public :
+    void show (){  
+        cout<<" its a polygon ." ;
+    }
+};
+
+class rectangle : public polygon {
+    public :
+     void show (){  
+        cout<<" rectangle has 4 sides ."<<endl  ;
+    }
+};
+
+class triangle : public polygon {
+    public :
+     void show (){  
+        cout<<" triangle has 3 sides ." << endl ;
+    }
+};
+int main (){
+    
+    polygon *P ;
+    triangle T ;
+    P = &T ;
+    P -> show ();
+}
