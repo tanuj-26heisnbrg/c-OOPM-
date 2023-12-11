@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std ;
+    // ENCAPSULATION WITH INHERITANCE 
+class A {
+    private :
+    int a ; // data hiding
+    public :
+    A() { a = 5 ;}
+    A(int p ) { a = p ;}
+    void show() { cout << a ;}
+};
+class B: public A {
+    
+};
+class V : public B{};
+int main() {
+    V L ; 
+    L.show() ; /* L named object accessing the
+                  private member variable "a" indirectly from the 
+                  child class B*/ 
+    return 0;
+}
