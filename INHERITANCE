@@ -23,7 +23,7 @@ public:
 	} 
 }; 
 
-class Student : private Person { 
+class Student : private Person {    // SINGLE INHERITANCE
 	char course[50]; 
 	int fee; 
 
