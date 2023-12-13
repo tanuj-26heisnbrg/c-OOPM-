@@ -1,0 +1,40 @@
+// Multilevel inheritance 
+
+#include <iostream>
+using namespace std ;
+ class A {
+     
+     public :
+     int p ;
+     A(){
+        p = 5;
+     }
+ };
+ 
+ class B: public A {
+     public :
+     void L(){
+         cout << p ;
+     }
+ };
+ 
+ class C :public B{
+     
+     public :
+     void R(){
+         cout << p ;
+     }
+ };
+
+int main() {
+    
+ B A1;  /* we wouldn't be able to access the member of both parent 
+          classes privately , only we access them publicaly */
+ C s ;
+
+ cout << A1.p ;
+ 
+ //output = 55 
+
+    return 0;
+}
