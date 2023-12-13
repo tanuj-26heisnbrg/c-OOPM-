@@ -1,5 +1,8 @@
 // simple program for multiple inheritance 
 
+//CODE 1 
+
+
 #include <iostream>
 using namespace std ;
 
@@ -31,3 +34,40 @@ int main() {
     C1.display() ;
     return 0;
 }
+
+
+// CODE 2 FOR CONSTRUCTOR CALLING IN MULTIPLE INHERITANCE 
+
+/*  
+#include <iostream>
+using namespace std ;
+ class A {
+     
+     public :
+     int a ;
+     A(){
+        cout << " AA" ;
+     }
+ };
+ 
+ class B {
+     
+     public :
+     int b ;
+     B(){ cout <<" BB " ;}
+ };
+ 
+ class C : B , A{    // THE CONSTRUCTORS OF PARENT CLASS WILL BE CALLED SEQUENCIALLY i.e. 1st B and then A and at lastly C's .
+     
+     public :
+     C(){ cout <<" CC " ;}
+ };
+
+int main() {
+    
+   C C1;
+
+    return 0;
+}
+
+*/
