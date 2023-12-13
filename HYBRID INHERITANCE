@@ -12,8 +12,10 @@ class A {
 };
 
 class B : public A {
-    
-};
+                                 /* BOTH B & C classes are inherited class of parent class A and at last the class D 
+                                    inherites the classes B & C .. this also the example of the famous diamond problem  */ 
+                                                   
+};   
 
 class C : public A {
     
