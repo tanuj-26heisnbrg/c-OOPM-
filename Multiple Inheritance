@@ -1,0 +1,33 @@
+// simple program for multiple inheritance 
+
+#include <iostream>
+using namespace std ;
+
+class A {
+    public: 
+    int a ;
+    A() { a=5 ;}
+    
+};
+class B {
+    public:
+    int a ;
+    B(){ a = 6 ;}
+    
+};
+
+class C : public A , public B {
+  public :
+  void display (){
+      
+      cout << B::a ; // use of scope resolution operator to specify which class is to be called 
+      
+  }
+    
+};
+
+int main() {
+    C C1 ;
+    C1.display() ;
+    return 0;
+}
