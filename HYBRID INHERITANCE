@@ -1,0 +1,38 @@
+// HYBRID INHERITANCE 
+
+#include <iostream>
+using namespace std ;
+
+class A {
+    public :
+    int a ;
+    
+    A(){ a = 5 ;}
+    
+};
+
+class B : public A {
+    
+};
+
+class C : public A {
+    
+   
+};
+    
+class D : public B, public C {
+public:
+    void show() {
+        cout << B::a; // Specify that 'a' is from class B
+    }
+};
+
+int main() {
+    
+    D L ;
+    L.show();
+
+    return 0;
+}
+
+
