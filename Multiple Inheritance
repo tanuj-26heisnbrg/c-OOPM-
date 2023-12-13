@@ -24,7 +24,7 @@ class C : public A , public B {
   void display (){
       
       cout << B::a ; // use of scope resolution operator to specify which class is to be called 
-      
+      // cout << A::a ;      to display the output of class A.
   }
     
 };
