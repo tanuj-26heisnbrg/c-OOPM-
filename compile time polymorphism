@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+
+// Function overloading
+void printValue(int value) {
+    std::cout << "Printing integer: " << value << std::endl;
+}
+
+void printValue(double value) {
+    std::cout << "Printing double: " << value << std::endl;
+}
+
+void printValue(const std::string& value) {
+    std::cout << "Printing string: " << value << std::endl;
+}
+
+// Template function
+template <typename T>
+void printGenericValue(const T& value) {
+    std::cout << "Printing generic value: " << value << std::endl;
+}
+
+int main() {
+    // Compile-time polymorphism through function overloading
+    printValue(42);
+    printValue(3.14);
+    printValue("Hello, C++!");
+
+    // Compile-time polymorphism through template function
+    printGenericValue(42);
+    printGenericValue(3.14);
+    printGenericValue("Hello, C++!");
+
+    return 0;
+}
