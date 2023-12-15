@@ -4,7 +4,7 @@ using namespace std ;
 class A {
     private :
     int a ; // data hiding
-    public :
+    public :                   // datahiding + data abstraction = encapsulation
     A() { a = 5 ;}
     A(int p ) { a = p ;}
     void show() { cout << a ;}
