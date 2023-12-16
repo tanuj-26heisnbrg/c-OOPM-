@@ -1,0 +1,22 @@
+// average using class
+
+#include <iostream>
+using namespace std ;
+
+class A {
+int a,b,c,d,e ;
+public:
+A(){ a= 0; b=0 ; c=0 ; d =0 ; e=0 ;}
+void input() {
+    cout<< " enter 5 numbers for input :" ;
+    cin>>a>>b>>c>>d>>e ; }
+void average (){ cout <<" the average is : "<< (a+b+c+d+e)/5 ;}
+};
+
+int main() {
+    A s ;
+    s.input();
+    s.average();
+
+    return 0;
+}
