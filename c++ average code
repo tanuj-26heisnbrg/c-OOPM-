@@ -1,0 +1,10 @@
+// program to perform average ( upto 5 digits )
+#include <iostream>
+using namespace std ;
+
+int main() {
+    int a , b , c, d ,e ;
+    cout<<" Enter the five digits for Average  : ";
+    cin>>a>>b>>c>>d>>e ;
+    cout << " the average is : " << (a+b+c+d+e)/5 ; 
+}
