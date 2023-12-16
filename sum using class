@@ -1,0 +1,20 @@
+// performing a simple addition using class 
+
+#include <iostream>
+using namespace std ;
+class A {
+    
+    int a , b ;
+    public :
+    A(){ a=5 ; b=7;}
+    
+    void display () {
+        cout << " the sum is : "<<a+b ;
+    }
+};
+int main() {
+    A s ;
+    s.display() ;
+
+    return 0;
+}
