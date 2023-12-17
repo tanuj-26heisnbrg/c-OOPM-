@@ -1,0 +1,57 @@
+
+#include<iostream>
+using namespace std;
+class EmployeeInfo 
+{
+    static float  a;
+    int EID;
+    string NAME;
+    float SALARY;
+    string ROLE;
+    public:
+    EmployeeInfo()
+    {
+        EID = 0;
+        NAME = " ";
+        SALARY = 0;
+        ROLE = " ";
+    }
+     void init (int EID, string name, float salary, string role )
+    {
+        this -> EID = EID;
+        NAME = name;
+        SALARY = salary;
+        ROLE = role;
+    }
+    void display ()
+    {cout<<EID<<" "<<NAME<<" "<<SALARY<<" "<<ROLE<<" "<<endl;}
+     
+     public:
+  float sum(float p)
+    { 
+        a+=SALARY;
+        return a;
+    }
+};
+
+float EmployeeInfo :: a = 0;
+int main()
+{
+    int EID,i,N;
+    string NAME;
+    float SALARY,p,x;
+    string ROLE;
+    cout<<"Enter the total number of employees : ";
+    cin>>N;
+    cout<<"Enter Employees ID,NAME,SALARY,ROLE :\n";
+    EmployeeInfo SI[N];
+    for(i=0;i<N;i++)
+    {
+        cin>>EID>>NAME>>SALARY>>ROLE;
+        SI[i].init(EID,NAME,SALARY,ROLE);
+    }
+ for(i=0;i<N;i++)
+ x= SI[i].sum(p);
+   cout<<"Total Salary of all the Employees : "<<x;
+    return 0;
+}
