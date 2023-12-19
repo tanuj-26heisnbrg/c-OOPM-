@@ -1,0 +1,90 @@
+
+
+#include <iostream>
+
+// Definition for singly-linked list.
+struct ListNode {
+    int val;
+    ListNode* next;
+    ListNode(int x) : val(x), next(nullptr) {}
+};
+
+// Function to print a linked list
+void printList(ListNode* l) {
+    while (l != nullptr) {
+        std::cout << l->val << " ";
+        l = l->next;
+    }
+    std::cout << std::endl;
+}
+
+// Function to add two numbers represented by linked lists
+ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+    ListNode* dummy = new ListNode(0); // Dummy node to simplify code
+    ListNode* current = dummy;
+    int carry = 0;
+
+    while (l1 != nullptr || l2 != nullptr) {
+        int x = (l1 != nullptr) ? l1->val : 0;
+        int y = (l2 != nullptr) ? l2->val : 0;
+
+        int sum = x + y + carry;
+        carry = sum / 10;
+
+        current->next = new ListNode(sum % 10);
+        current = current->next;
+
+        if (l1 != nullptr) l1 = l1->next;
+        if (l2 != nullptr) l2 = l2->next;
+    }
+
+    if (carry > 0) {
+        current->next = new ListNode(carry);
+    }
+
+    return dummy->next;
+}
+
+int main() {
+    // Create two linked lists: l1 = [2,4,3], l2 = [5,6,4]
+    ListNode* l1 = new ListNode(2);
+    l1->next = new ListNode(4);
+    l1->next->next = new ListNode(3);
+
+    ListNode* l2 = new ListNode(5);
+    l2->next = new ListNode(6);
+    l2->next->next = new ListNode(4);
+
+    std::cout << "Input List 1: ";
+    printList(l1);
+
+    std::cout << "Input List 2: ";
+    printList(l2);
+
+    // Add two numbers represented by linked lists
+    ListNode* result = addTwoNumbers(l1, l2);
+
+    std::cout << "Output: ";
+    printList(result);
+
+    // Clean up memory
+    while (l1 != nullptr) {
+        ListNode* temp = l1;
+        l1 = l1->next;
+        delete temp;
+    }
+
+    while (l2 != nullptr) {
+        ListNode* temp = l2;
+        l2 = l2->next;
+        delete temp;
+    }
+
+    while (result != nullptr) {
+        ListNode* temp = result;
+        result = result->next;
+        delete temp;
+    }
+
+    return 0;
+}
