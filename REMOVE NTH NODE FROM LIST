@@ -1,0 +1,105 @@
+#include <iostream>
+
+// Define a ListNode class
+class ListNode {
+public:
+    int data;
+    ListNode* next;
+
+    // Constructor
+    ListNode(int value) : data(value), next(nullptr) {}
+};
+
+// Define a LinkedList class
+class LinkedList {
+public:
+    ListNode* head;
+
+    // Constructor
+    LinkedList() : head(nullptr) {}
+
+    // Function to add a new node at the end of the list
+    void append(int value) {
+        ListNode* newNode = new ListNode(value);
+        if (head == nullptr) {
+            head = newNode;
+        } else {
+            ListNode* temp = head;
+            while (temp->next != nullptr) {
+                temp = temp->next;
+            }
+            temp->next = newNode;
+        }
+    }
+
+    // Function to print the linked list
+    void printList() {
+        ListNode* temp = head;
+        while (temp != nullptr) {
+            std::cout << temp->data << " ";
+            temp = temp->next;
+        }
+        std::cout << std::endl;
+    }
+
+    // Function to remove the nth node from the list
+    void removeNthNode(int n) {
+        if (head == nullptr || n <= 0) {
+            return; // Invalid input or empty list
+        }
+
+        // Dummy node to simplify edge cases
+        ListNode* dummy = new ListNode(0);
+        dummy->next = head;
+
+        // Two pointers to traverse the list
+        ListNode* fast = dummy;
+        ListNode* slow = dummy;
+
+        // Move fast pointer n+1 steps ahead
+        for (int i = 0; i <= n; i++) {
+            if (fast == nullptr) {
+                delete dummy;
+                return; // n is greater than the length of the list
+            }
+            fast = fast->next;
+        }
+
+        // Move both pointers until fast reaches the end
+        while (fast != nullptr) {
+            fast = fast->next;
+            slow = slow->next;
+        }
+
+        // Remove the nth node
+        ListNode* temp = slow->next;
+        slow->next = slow->next->next;
+        delete temp;
+
+        // Save the new head and delete the dummy node
+        head = dummy->next;
+        delete dummy;
+    }
+};
+
+int main() {
+    // Create a sample linked list: 1 -> 2 -> 3 -> 4 -> 5
+    LinkedList myList;
+    myList.append(1);
+    myList.append(2);
+    myList.append(3);
+    myList.append(4);
+    myList.append(5);
+
+    std::cout << "Original Linked List: ";
+    myList.printList();
+
+    // Remove the 2nd node (index 1)
+    int n = 2;
+    myList.removeNthNode(n);
+
+    std::cout << "Linked List after removing the " << n << "nd node: ";
+    myList.printList();
+
+    return 0;
+}
