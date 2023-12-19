@@ -1,3 +1,6 @@
+// TO REMOVE Nth NODE FROM LIST
+
+
 #include <iostream>
 
 // Define a ListNode class
