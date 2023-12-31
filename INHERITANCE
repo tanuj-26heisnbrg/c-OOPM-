@@ -9,6 +9,7 @@ class Person {
 	char name[100]; 
 
 public: 
+
 	void set_p() 
 	{ 
 		cout << "Enter the Id:"; 
