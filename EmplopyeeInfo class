@@ -8,6 +8,8 @@ class EmployeeInfo
     int EID;
     string NAME;
     float SALARY;
+
+
     string ROLE;
     public:
 
