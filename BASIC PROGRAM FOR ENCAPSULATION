@@ -5,6 +5,7 @@ using namespace std ;
 
     // ENCAPSULATION WITH INHERITANCE 
 
+
 class A {
     private :
     int a ; // data hiding
