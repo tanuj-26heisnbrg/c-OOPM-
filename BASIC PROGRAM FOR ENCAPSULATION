@@ -9,7 +9,9 @@ using namespace std ;
 class A {
     private :
     int a ; // data hiding
-    public :                   // datahiding + data abstraction = encapsulation
+    public :                   
+
+// datahiding + data abstraction = encapsulation
     A() { a = 5 ;}
     A(int p ) { a = p ;}
     void show() { cout << a ;}
