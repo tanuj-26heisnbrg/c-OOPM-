@@ -22,6 +22,7 @@ public:
 	{ 
 		cout << endl <<"Id: "<< id << "\nName: " << name <<endl; 
 	} 
+
 }; 
 
 class Student : private Person {    // SINGLE INHERITANCE
