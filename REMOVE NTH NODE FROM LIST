@@ -16,6 +16,7 @@ public:
 // Define a LinkedList class
 class LinkedList {
 public:
+
     ListNode* head;
 
     // Constructor
