@@ -8,6 +8,7 @@ using namespace std ;
 
 class A {
     private :
+
     int a ; // data hiding
     public :                   
 
