@@ -12,6 +12,7 @@ class A {
     public :                   
 
 // datahiding + data abstraction = encapsulation
+
     A() { a = 5 ;}
     A(int p ) { a = p ;}
     void show() { cout << a ;}
