@@ -53,4 +53,5 @@ int main()
 	s.set_s(); 
 	s.display_s(); 
 	return 0; 
+
 }
