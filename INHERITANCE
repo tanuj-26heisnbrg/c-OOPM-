@@ -29,6 +29,7 @@ class Student : private Person {    // SINGLE INHERITANCE
 	int fee; 
 
 public: 
+
 	void set_s() 
 	{ 
 		set_p(); 
