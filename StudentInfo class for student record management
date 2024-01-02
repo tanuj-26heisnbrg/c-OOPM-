@@ -58,6 +58,8 @@ int main()
         cin>>RN>>FEE>>NAME>>Branch;
         SI[i].init(RN,NAME,FEE,Branch);
     }
+
+
    // cout<<"ENter the name, roll number,fees and branch \n";
    // cin>>NAME>>RN>>FEE>>Branch;
  for(i=0;i<N;i++)
