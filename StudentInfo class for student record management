@@ -2,7 +2,8 @@
 
 #include<iostream>
 using namespace std;
-class StudentInfo 
+class StudentInfo
+
 {
     static int a;
     int RN;
