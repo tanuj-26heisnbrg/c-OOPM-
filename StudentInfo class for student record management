@@ -41,6 +41,7 @@ class StudentInfo
 
 int StudentInfo :: a = 0;
 int main()
+
 {
     int RN,i,N,x;
     float FEE,p;
