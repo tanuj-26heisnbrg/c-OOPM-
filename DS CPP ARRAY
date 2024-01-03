@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <vector>
+using namespace std ;
 
 int main() {
     // Declaration and initialization of a vector
