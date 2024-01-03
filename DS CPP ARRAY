@@ -21,7 +21,7 @@ int main() {
     // Modifying elements
     myArray[1] = 25;
 
-    // Displaying elements after modification
+    // Displaying elements 
     std::cout << "Element at index 1 (after modification): " << myArray[1] << std::endl;
 
     // Iterating through the vector
