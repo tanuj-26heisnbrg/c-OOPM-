@@ -1,4 +1,4 @@
-// IMPLEMENTATION OF ARRAY 
+// IMPLEMENTATION OF ARRAY
 
 #include <iostream>
 #include <vector>
@@ -6,25 +6,31 @@ using namespace std ;
 
 int main() {
     // Declaration and initialization of a vector
+
     std::vector<int> myArray;
 
     // Adding elements to the vector
+
     myArray.push_back(10);
     myArray.push_back(20);
     myArray.push_back(30);
 
     // Accessing elements
+
     std::cout << "Element at index 0: " << myArray[0] << std::endl;
     std::cout << "Element at index 1: " << myArray[1] << std::endl;
     std::cout << "Element at index 2: " << myArray[2] << std::endl;
 
     // Modifying elements
+
     myArray[1] = 25;
 
     // Displaying elements 
+
     std::cout << "Element at index 1 (after modification): " << myArray[1] << std::endl;
 
     // Iterating through the vector
+
     std::cout << "Elements of the vector: ";
     for (int i = 0; i < myArray.size(); ++i) {
         std::cout << myArray[i] << " ";
