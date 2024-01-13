@@ -24,6 +24,7 @@ class StudentInfo
         Branch = branch;
 
     }
+
     void display ()
     {cout<<RN<<" "<<NAME<<" "<<FEE<<" "<<Branch<<" "<<endl;}
      
