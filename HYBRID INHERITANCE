@@ -1,4 +1,5 @@
 // HYBRID INHERITANCE 
+// using classes named A , B , C
 
 #include <iostream>
 using namespace std ;
