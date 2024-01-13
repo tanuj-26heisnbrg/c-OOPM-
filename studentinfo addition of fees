@@ -17,6 +17,7 @@ class StudentInfo
     }
      void init (int RN, string name, float fee, string branch )
     {
+
         this -> RN = RN;
         NAME = name;
         FEE = fee;
