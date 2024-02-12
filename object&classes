@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std ;
+
+class box {
+    
+    public :
+       double length ;
+       double breadth ;
+       double height ;
+};
+
+int main() {
+    
+    box b1;  // creating objects
+    box b2;
+   
+   //specs of the box 1 
+   cout << " VALUES FOR BOX 1 :"<<endl ;
+   cout << " enter the height :"<<endl ;
+   cin>> b1.height ;
+   cout <<" enter the breadth :"<<endl ;
+   cin>> b1.breadth  ;
+   cout <<" enter the length :"<<endl ;
+    cin>>b1.length ;
+    
+    // specs of the box 2 
+    cout << " VALUES FOR BOX 2 :"<<endl ;
+    cout <<" enter the length :"<<endl ;
+   cin>> b2.length  ;
+   cout << " enter the height :"<<endl ;
+    cin>>b2.height ; 
+     cout <<" enter the breadth :"<<endl ;
+cin>>b2.breadth  ;
+    
+    // volume of box 1 
+    cout<< "vol. of box 1 :" <<b1.height*b1.length*b1.breadth <<endl;
+    
+    // volume of box 2 
+    cout<< "vol. of box 2 :"<< b2.height*b2.breadth*b2.length<<endl ;
+    
+
+
+    return 0;
+}
