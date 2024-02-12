@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std ;
+
+class printdata  {
+public :
+     void print (int i )
+{ cout << " printing int :" << i<<endl ;} 
+
+void print (double  f )
+{
+    cout <<" printing double : "<< f <<endl ;
+}
+
+void print (char*n )
+{ cout << " printing character :"<<n <<endl ;}
+};
+
+int main() {
+    
+ printdata p1 ;
+ p1.print(1);
+ p1.print(1.0);
+ p1.print(" hello world");
+    
+
+
+    return 0;
+}
