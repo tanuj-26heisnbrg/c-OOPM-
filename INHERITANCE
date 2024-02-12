@@ -56,3 +56,45 @@ int main()
 	return 0; 
 
 }
+
+
+
+******************************
+
+///more examples of inheritance 
+
+// example 1 
+
+  #include <iostream>
+using namespace std ;
+
+class A {
+    int a ,b ;
+    public :
+   A(int n1, int n2){
+        cout << " inside constructor "<<endl ;
+        a=n1;
+        b=n2;
+    }
+    void display (){
+        cout<<"A= "<<a<<endl ;
+        cout<<"B= "<<b<<endl ;
+        
+    }
+    ~A(){ cout << " inside destructor "<<endl ;}
+};
+class B : public A
+{
+    public : 
+     B (int n1 , int n2 ): A ( n1 ,  n2)
+     { cout << " inside constructor of  b " <<endl ;}
+    
+};
+
+int main() {
+    B f(9,8) ;
+    f.display();
+
+
+    return 0;
+}
