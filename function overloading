@@ -1,19 +1,19 @@
-// a class named printdta used to print various kind of data types 
+// a class named printdata used to print various kind of data types 
 
 #include <iostream>
 using namespace std ;
 
 class printdata  {
 public :
-     void print (int i )
+     void print (int i )                    //print function to print integer
 { cout << " printing int :" << i<<endl ;} 
 
-void print (double  f )
+void print (double  f )                    // print function to print double
 {
     cout <<" printing double : "<< f <<endl ;
 }
 
-void print (char*n )
+void print (char*n )                     // print function to print character
 { cout << " printing character :"<<n <<endl ;}
 };
 
