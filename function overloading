@@ -1,3 +1,5 @@
+// a class named printdta used to print various kind of data types 
+
 #include <iostream>
 using namespace std ;
 
